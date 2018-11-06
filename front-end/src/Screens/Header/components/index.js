@@ -12,7 +12,6 @@ import {
 import {Section} from 'Common/styles'
 import {navItems} from 'Common/data'
 
-
 class Header extends React.Component {
   render () {
     return (

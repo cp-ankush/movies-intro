@@ -1,15 +1,19 @@
 export const navItems = [
   {
-    displayName: "Movies"
+    displayName: "Movies",
+    link: '/movies'
   },
   {
-    displayName: "TV Shows"
+    displayName: "TV Shows",
+    link: '/tv-shows'
   },
   {
-    displayName: "People"
+    displayName: "People",
+    link: '/people'
   },
   {
     displayName: "Login",
-    login: true
+    login: true,
+    link: '/login'
   }
 ]

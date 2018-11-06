@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import Header from './Screens/Header/components'
+import Router from 'Router'
 import './App.css';
 import Card from './Card'
 
@@ -28,14 +28,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <header className="App-header">
-          {
-            this.state.movies.map((item) => {
-              return (<Card title={item.title} description={item.overview} img={item.poster_path} />)
-            })
-          }
-        </header>
+        <Router />
       </div>
     );
   }

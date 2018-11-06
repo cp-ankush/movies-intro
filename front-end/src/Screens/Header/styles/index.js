@@ -36,6 +36,7 @@ export const Item = styled.li`
   color: white;
   padding: 0 15px;
   font-weight: bold;
+  cursor: pointer;
 `
 
 export const LoginItem = styled(Item)`
