@@ -7,7 +7,7 @@ import {
   TextContainer,
   Title,
   Description
-} from './styles'
+} from '../styles'
 
 
 const Card = ({title, description, img}) => {

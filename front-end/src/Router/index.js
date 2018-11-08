@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 
 import Header from 'Screens/Header/components'
+import Home from 'Screens/Home/components'
 
 class App extends Component {
   render() {
@@ -14,7 +15,7 @@ class App extends Component {
         <div>
           <Header />
           {
-            //<Route exact path='/' component={HomeComponent}></Route>
+            <Route exact path='/' component={Home}></Route>
           }
         </div>
       </Router>
