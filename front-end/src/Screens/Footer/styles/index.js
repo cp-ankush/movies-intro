@@ -7,8 +7,8 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 120px;
-  font-size: 18px;
+  height: 140px;
+  font-size: 20px;
 `
 
 export const Content = styled.div`
