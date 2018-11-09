@@ -6,5 +6,5 @@ export const Section = styled.div`
   height: 100%;
   margin: 0 auto;
   display: flex;
-  align-items: center;
+  flex-direction: column;
 `

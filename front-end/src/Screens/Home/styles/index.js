@@ -1,40 +1,34 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
- padding: 10px;
- margin-bottom: 10px;
- width: 50%;
- height: 500px;
- border: 1px solid grey;
- border-radius: 5px;
- display: flex;
- box-shadow: 1px 1px 10px grey;
+  margin: 120px 20px;
+  color: white;
 `
 
-export const ImageContainer = styled.div`
-  width: 250px;
-  height: 500px;
-  border-radius: 5px;
-  overflow: hidden;
-`
-
-export const Image = styled.img`
-  width: 100%
-  height: 100%;
-  border-radius: 5px;
-  overflow: hidden;
-`
-
-export const TextContainer = styled.p`
-  width: 50%;
-  padding: 0 15px;
+export const Heading = styled.h1`
   text-align: left;
+  margin: 20px 10px;
 `
 
-export const Title = styled.h2`
+export const CardItemsContainer = styled.div`
+  display: flex;
+  overflow-x: auto;
+`
+
+export const Separator = styled.div`
   margin-top: 10px;
 `
 
-export const Description = styled.p`
- font-size: 18px
+export const CardContainer = styled.div`
+ margin-bottom: 10px;
+ width: 200px;
+ height: 300px;
+ display: flex;
+ margin: 0 10px;
+`
+
+export const Image = styled.img`
+  overflow: hidden;
+  min-width: 100%;
+  min-height: 100%;
 `

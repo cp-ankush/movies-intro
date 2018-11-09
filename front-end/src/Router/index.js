@@ -4,8 +4,6 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-
-import Header from 'Screens/Header/components'
 import Home from 'Screens/Home/components'
 
 class App extends Component {
@@ -13,10 +11,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Header />
-          {
-            <Route exact path='/' component={Home}></Route>
-          }
+          <Route exact path='/' component={Home}></Route>
         </div>
       </Router>
     );

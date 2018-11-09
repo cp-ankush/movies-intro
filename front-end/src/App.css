@@ -1,6 +1,10 @@
 .App {
   text-align: center;
   font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -18,11 +22,14 @@
   font-size: calc(10px + 2vmin);
   color: white;
   padding: 100px 50px 50px;
-
 }
 
 .App-link {
   color: #61dafb;
+}
+
+body {
+  background-color: rgb(13, 28, 35)
 }
 
 @keyframes App-logo-spin {

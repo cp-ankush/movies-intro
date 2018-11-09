@@ -1,26 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {
-  Container,
-  ImageContainer,
-  Image,
-  TextContainer,
-  Title,
-  Description
+  CardContainer,
+  Image
 } from '../styles'
 
 
 const Card = ({title, description, img}) => {
+  const displayDescription = description.length > 110? description.substring(0, 110) : description;
   return (
-    <Container>
-      <ImageContainer>
-        <Image src={`${process.env.REACT_APP_IMAGE_URL}${img}`} alt="logo" />
-      </ImageContainer>
-      <TextContainer>
-        <Title>{title}</Title>
-        <Description>{description}</Description>
-      </TextContainer>
-    </Container>
+    <CardContainer>
+      <Image src={`${process.env.REACT_APP_IMAGE_URL}${img}`} alt="logo" />
+    </CardContainer>
   )
 }
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background-color: rgb(13, 28, 35);
+  background-image: linear-gradient(to right, rgb(13, 28, 35), rgba(7, 64, 52, 1));
   height: 90px;
   width: 100%;
   position: fixed;
