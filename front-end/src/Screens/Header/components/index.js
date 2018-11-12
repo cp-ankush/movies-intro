@@ -6,34 +6,41 @@ import {
  Logo,
  Navbar,
  Item,
- LoginItem
+ LoginItem,
 } from '../styles'
 
 import {Section} from 'Common/styles'
 import {navItems} from 'Common/data'
+import HamburgerIcon from './Hamburger'
 
 class Header extends React.Component {
+
   render () {
+    const {isMobile} = this.props;
     return (
-      <Container>
+      <Container isMobile={isMobile}>
         <Section>
           <Row>
-           <Logo>
+           <Logo isMobile={isMobile}>
              Movie Info
            </Logo>
-           <Navbar>
            {
-             navItems.map( (item, index) => (
-               item.login?
-               <LoginItem key={index}>
-                 Login
-               </LoginItem> :
-               <Item key={index}>
-                 {item.displayName}
-               </Item>
-             ))
+             !isMobile ?
+             <Navbar>
+             {
+               navItems.map( (item, index) => (
+                 item.login?
+                 <LoginItem key={index}>
+                   Login
+                 </LoginItem> :
+                 <Item key={index}>
+                   {item.displayName}
+                 </Item>
+               ))
+             }
+           </Navbar> :
+           <HamburgerIcon />
            }
-           </Navbar>
           </Row>
         </Section>
       </Container>

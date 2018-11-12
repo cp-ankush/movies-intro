@@ -8,9 +8,17 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 140px;
-  font-size: 20px;
+  font-size: ${props => props.isMobile? '14px' : '20px'}
 `
 
 export const Content = styled.div`
   line-height: 28px;
+`
+
+export const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 `

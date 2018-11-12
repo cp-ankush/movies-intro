@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   background-image: linear-gradient(to right, rgb(13, 28, 35), rgba(7, 64, 52, 1));
-  height: 90px;
+  height: ${props => (props.isMobile? '60px' : '90px')};
   width: 100%;
   position: fixed;
   left: 0px;
@@ -21,8 +21,9 @@ export const Logo = styled.h1`
   display: flex;
   align-items: center;
   border: 1px solid;
-  padding: 10px;
   border-radius: 5px;
+  font-size: ${props => (props.isMobile? '16px' : '32px')}
+  padding: ${props => (props.isMobile? '5px' : '10px')}
 `
 
 export const Navbar = styled.ul`
@@ -49,4 +50,34 @@ export const LoginItem = styled(Item)`
   border: 1px solid;
   border-radius: 5px;
   margin-left: 10px;
+`
+
+export const HamburgerContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+`
+
+export const Hamburger = styled.div`
+  width: 20px;
+  height: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    cursor: pointer;
+  }
+  span {
+    width: 20px;
+    height: 2px;
+    background-color: #ecf0f1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
 `

@@ -13,6 +13,7 @@ import {
 } from '../styles';
 
 import {Section} from 'Common/styles'
+import {isMobile} from 'Utils'
 
 class Home extends React.Component {
 
@@ -58,16 +59,18 @@ class Home extends React.Component {
     const {newMovies, moviesByPopularity} = this.state;
     const newCardElements = !isEmpty(newMovies) && this.renderCards(newMovies)
     const popularCardElements = !isEmpty(moviesByPopularity) && this.renderCards(moviesByPopularity)
+    const isMob = isMobile();
+
     return (
-      <Container>
-        <Heading>New Releases</Heading>
+      <Container isMobile={isMob}>
+        <Heading isMobile={isMob}>New Releases</Heading>
         <CardItemsContainer>
         {
           newCardElements
         }
         </CardItemsContainer>
         <Separator />
-        <Heading>By Popularity</Heading>
+        <Heading isMobile={isMob}>By Popularity</Heading>
         <CardItemsContainer>
         {
           popularCardElements
