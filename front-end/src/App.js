@@ -6,16 +6,21 @@ import Footer from 'Screens/Footer/components'
 import Header from 'Screens/Header/components'
 import {isMobile} from 'Utils'
 
+export const IsMobileContext = React.createContext({
+  isMobile: null
+})
+
 class App extends Component {
 
   render() {
-    const isMob = isMobile()
     return (
-      <div className="App">
-        <Header isMobile={isMob} />
-        <Router isMobile={isMob} />
-        <Footer isMobile={isMob} />
-      </div>
+      <IsMobileContext.Provider value={{isMobile: isMobile()}}>
+        <div className="App">
+          <Header />
+          <Router />
+          <Footer />
+        </div>
+      </IsMobileContext.Provider>
     );
   }
 }
