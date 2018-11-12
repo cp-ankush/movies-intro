@@ -1,5 +1,13 @@
 import styled from 'styled-components'
 
+export const Logo = styled.h1`
+  color: white;
+  display: flex;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 5px;
+`
+
 export const Container = styled.div`
   background-image: linear-gradient(to right, rgb(13, 28, 35), rgba(7, 64, 52, 1));
   height: ${props => (props.isMobile? '60px' : '90px')};
@@ -9,21 +17,16 @@ export const Container = styled.div`
   right: 0px;
   top: 0px;
   z-index: 999;
+  ${Logo} {
+    font-size: ${props => (props.isMobile? '16px' : '32px')}
+    padding: ${props => (props.isMobile? '5px' : '10px')}
+  }
 `
 export const Row = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 100%;
-`
-export const Logo = styled.h1`
-  color: white;
-  display: flex;
-  align-items: center;
-  border: 1px solid;
-  border-radius: 5px;
-  font-size: ${props => (props.isMobile? '16px' : '32px')}
-  padding: ${props => (props.isMobile? '5px' : '10px')}
 `
 
 export const Navbar = styled.ul`

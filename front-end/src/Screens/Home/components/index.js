@@ -13,7 +13,7 @@ import {
 } from '../styles';
 
 import {Section} from 'Common/styles'
-import {IsMobileContext} from 'App'
+import IsMobileContext from 'IsMobileContext'
 
 class Home extends React.Component {
 
@@ -24,6 +24,7 @@ class Home extends React.Component {
       moviesByPopularity: []
     }
   }
+  static contextType = IsMobileContext
 
   componentDidMount() {
     const today = moment().format('YYYY-MM-DD');
@@ -61,27 +62,21 @@ class Home extends React.Component {
     const popularCardElements = !isEmpty(moviesByPopularity) && this.renderCards(moviesByPopularity)
 
     return (
-      <IsMobileContext.Consumer>
+      <Container isMobile={this.context.isMobile}>
+        <Heading>New Releases</Heading>
+        <CardItemsContainer>
         {
-          isMobile => (
-            <Container isMobile={isMobile}>
-              <Heading>New Releases</Heading>
-              <CardItemsContainer>
-              {
-                newCardElements
-              }
-              </CardItemsContainer>
-              <Separator />
-              <Heading>By Popularity</Heading>
-              <CardItemsContainer>
-              {
-                popularCardElements
-              }
-              </CardItemsContainer>
-            </Container>
-          )
+          newCardElements
         }
-      </IsMobileContext.Consumer>
+        </CardItemsContainer>
+        <Separator />
+        <Heading>By Popularity</Heading>
+        <CardItemsContainer>
+        {
+          popularCardElements
+        }
+        </CardItemsContainer>
+      </Container>
     )
   }
 }

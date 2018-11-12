@@ -5,10 +5,7 @@ import './App.css';
 import Footer from 'Screens/Footer/components'
 import Header from 'Screens/Header/components'
 import {isMobile} from 'Utils'
-
-export const IsMobileContext = React.createContext({
-  isMobile: null
-})
+import IsMobileContext from 'IsMobileContext'
 
 class App extends Component {
 

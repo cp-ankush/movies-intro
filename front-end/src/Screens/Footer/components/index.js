@@ -6,31 +6,26 @@ import {
  ContentContainer
 } from '../styles'
 import moment from 'moment'
-import {IsMobileContext} from 'App'
+import IsMobileContext from 'IsMobileContext'
 
 import {Section} from 'Common/styles'
 
 class Footer extends React.Component {
+
+  static contextType = IsMobileContext
+
   render () {
     const year = moment().format("YYYY");
-    const {isMobile} = this.props;
-
     return (
-      <IsMobileContext.Consumer>
-        {
-          isMobile => (
-             <Container isMobile={isMobile}>
-               <Section>
-                 <ContentContainer>
-                   <Content><b>MovieInfo</b>&nbsp;is the site to find the movies, TV shows, movies stars.</Content>
-                   <Content>It provides the movie reviews, releases date and many more.</Content>
-                   <Content>&copy; {year}</Content>
-                 </ContentContainer>
-               </Section>
-             </Container>
-           )
-        }
-      </IsMobileContext.Consumer>
+      <Container isMobile={this.context.isMobile}>
+        <Section>
+          <ContentContainer>
+            <Content><b>MovieInfo</b>&nbsp;is the site to find the movies, TV shows, movies stars.</Content>
+            <Content>It provides the movie reviews, releases date and many more.</Content>
+            <Content>&copy; {year}</Content>
+          </ContentContainer>
+        </Section>
+      </Container>
     )
   }
 }
